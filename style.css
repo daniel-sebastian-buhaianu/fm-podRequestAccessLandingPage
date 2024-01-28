@@ -25,6 +25,7 @@ header {
 }
 
 main {
+  margin-bottom: 0;
   width: 327px;
   margin-left: auto;
   margin-right: auto;
@@ -51,16 +52,20 @@ main p {
   line-height: 25px;
   margin-bottom: 33px;
 }
-main ul {
+main #call-to-action {
+  display: flex;
+  flex-direction: column;
+}
+main #call-to-action ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
 }
-main .form {
+main #call-to-action .form {
   display: flex;
   flex-direction: column;
 }
-main .form__item {
+main #call-to-action .form__item {
   width: 100%;
   padding: 9px 32px;
   margin-bottom: 16px;
@@ -72,16 +77,88 @@ main .form__item {
   font-size: 14px;
   font-weight: 500;
 }
-main .form__item--input::placeholder {
+main #call-to-action .form__item--input::placeholder {
   opacity: 0.5;
 }
-main .form__item--submit {
+main #call-to-action .form__item--submit {
   color: #121725;
   background-color: #54E6AF;
 }
 
 .img--mid {
   display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: block;
+    min-height: auto;
+    background-image: none;
+    background-color: #121725;
+    padding-top: 50px;
+    padding-left: 39px;
+  }
+  body .mask {
+    width: 491px;
+    height: 767px;
+    background-image: url(assets/tablet/jpg/image-host.jpg);
+    left: auto;
+    right: 0;
+  }
+  header {
+    margin: 0;
+    margin-bottom: 152px;
+    text-align: start;
+  }
+  main {
+    width: 635px;
+    margin: 0;
+    margin-bottom: 153px;
+    padding-top: 93px;
+    background-color: #121725;
+  }
+  main h1 {
+    font-size: 48px;
+    text-align: start;
+    line-height: 56px;
+    margin-bottom: 31px;
+  }
+  main p {
+    text-align: start;
+    margin-bottom: 40px;
+    width: 445px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  main #call-to-action {
+    flex-direction: column-reverse;
+  }
+  main #call-to-action ul {
+    width: 536px;
+    margin-bottom: 0;
+  }
+  main #call-to-action .form {
+    width: 427px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 64px;
+    border-radius: 28px;
+    background-color: #2C344B;
+  }
+  main #call-to-action .form__item {
+    margin-bottom: 0;
+    width: auto;
+  }
+  main #call-to-action .form__item--submit {
+    width: 162px;
+  }
+  .img--sm {
+    display: none;
+  }
+  .img--mid {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
