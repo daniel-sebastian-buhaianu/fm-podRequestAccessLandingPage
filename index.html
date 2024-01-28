@@ -4,10 +4,34 @@
     <title>Pod Request Access Landing Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="mask"></div>
+    <header>
+      <img src="assets/logo.svg" alt="logo">
+    </header>
+    <main>
+      <h1>Publish your podcasts <span>everywhere.</span></h1>
+      <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+      <ul>
+        <li><img src="assets/mobile/svg/spotify-logo.svg" alt="spotify logo"></li>
+        <li><img src="assets/mobile/svg/apple-podcast-logo.svg" alt="apple podcast logo"></li>
+        <li><img src="assets/mobile/svg/google-podcasts-logo.svg" alt="google podcasts logo"></li>
+        <li><img src="assets/mobile/svg/pocket-casts-logo.svg" alt="pocket casts logo"></li>
+      </ul>
+      <form class="form">
+        <input class="form__item form__item--input" type="email" id="email" name="email" placeholder="Email address">
+        <input class="form__item form__item--submit" type="submit" value="Request Access">
+      </form>
+    </main>
+    <footer>
+      <img class="img img--mid" src="assets/bg-pattern-dots.svg" alt="background pattern dots">
+    </footer>
   </body>
 </html>
 
