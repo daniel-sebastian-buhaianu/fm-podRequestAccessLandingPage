@@ -10,6 +10,7 @@ This is a solution to the [Pod request access landing page challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -44,8 +45,6 @@ In this challenge I've learned:
 - how to code a responsive website from a Figma design
 - how to update the DOM using JavaScript
 - how to validate form input and display error messages using JavaScript
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Useful resources
 
