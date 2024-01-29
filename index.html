@@ -38,8 +38,12 @@
           </li>
         </ul>
         <form class="form">
-          <input class="form__item form__item--input" type="email" id="email" name="email" placeholder="Email address">
-          <input class="form__item form__item--submit" type="submit" value="Request Access">
+          <div class="form__item">
+            <input class="form__item--input" type="email" id="email" name="email" placeholder="Email address">
+          </div>
+          <div class="form__item">
+            <input class="form__item--submit" type="submit" id="submit" value="Request Access">
+          </div>
         </form>
       </article>
     </main>
@@ -47,5 +51,25 @@
       <img class="img img--mid" src="assets/bg-pattern-dots.svg" alt="background pattern dots">
     </footer>
   </body>
+  <script>
+    document
+      .querySelector("#submit")
+      .addEventListener("click", function(event) {
+        event.preventDefault();
+        document
+          .querySelectorAll(".form__error")
+          .forEach(node => node.remove());
+        const emailInput = document.querySelector("#email");
+        const email = emailInput.value;
+        const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const isEmailValid = String(email).toLowerCase().match(regexp);
+        if (!isEmailValid)
+        {
+          const span = document.createElement("span");
+          span.textContent = "Oops! Please check your email";
+          span.setAttribute("class", "form__error");
+          emailInput.after(span);
+        }
+      });
+  </script>
 </html>
-

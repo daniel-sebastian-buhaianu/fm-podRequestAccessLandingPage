@@ -65,17 +65,31 @@ main #call-to-action .form {
   display: flex;
   flex-direction: column;
 }
+main #call-to-action .form__error {
+  color: #FB3E3E;
+  font-family: "Chivo", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 32px;
+  margin-top: 8px;
+}
 main #call-to-action .form__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+main #call-to-action .form__item--input, main #call-to-action .form__item--submit {
   width: 100%;
   padding: 9px 32px;
-  margin-bottom: 16px;
   border-radius: 28px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 28px;
+}
+main #call-to-action .form__item--input {
   background-color: #2C344B;
   color: #FFF;
-  font-family: "Chivo", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
 }
 main #call-to-action .form__item--input::placeholder {
   opacity: 0.5;
@@ -83,6 +97,10 @@ main #call-to-action .form__item--input::placeholder {
 main #call-to-action .form__item--submit {
   color: #121725;
   background-color: #54E6AF;
+}
+main #call-to-action .form__item--submit:hover {
+  background-color: #B3FFE2;
+  cursor: pointer;
 }
 
 .img--mid {
@@ -99,9 +117,11 @@ main #call-to-action .form__item--submit {
     padding-left: 39px;
   }
   body .mask {
-    width: 491px;
+    width: 63.9%;
     height: 767px;
     background-image: url(assets/tablet/jpg/image-host.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     left: auto;
     right: 0;
   }
@@ -147,17 +167,47 @@ main #call-to-action .form__item--submit {
     background-color: #2C344B;
   }
   main #call-to-action .form__item {
+    position: relative;
     margin-bottom: 0;
     width: auto;
   }
   main #call-to-action .form__item--submit {
     width: 162px;
   }
+  main #call-to-action .form__error {
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    margin: 0;
+  }
   .img--sm {
     display: none;
   }
   .img--mid {
     display: block;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    padding: 102px 0 130px 165px;
+  }
+  body .mask {
+    width: 61.6%;
+    height: 640px;
+    background-image: url(assets/desktop/image-host.jpg);
+    top: 130px;
+  }
+  header {
+    margin-bottom: 103px;
+  }
+  main {
+    width: 723px;
+    margin-bottom: 0;
+  }
+  footer .img {
+    position: absolute;
+    right: 0;
+    top: 718px;
   }
 }
 
